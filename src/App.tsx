@@ -8,7 +8,14 @@ function App() {
       </Header>
 
       <Body>
-        ...
+
+        {/* área de informações */}
+
+        {/* área de inserção */}
+
+        {/* Tabela de itens */}
+
+
       </Body>
 
     </Container>
