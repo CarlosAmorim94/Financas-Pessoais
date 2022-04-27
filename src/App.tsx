@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { FilterListByMonth, getCurrentMonth } from './helpers/dateFilter'
 import { TableArea } from './components/TableArea'
 import { InfoArea } from './components/InfoArea';
+import { InputArea } from './components/InputArea';
 
 function App() {
 
@@ -43,6 +44,13 @@ function App() {
     setCurrentMonth(newMonth)
   }
 
+  const handleAddItem = (item: Item) => {
+    let newList = [...list]
+    newList.push(item)
+
+    setList(newList)
+  }
+
   return (
     <Container>
       <Header>
@@ -58,7 +66,7 @@ function App() {
         expense={expense}
         />
 
-        {/* área de inserção */}
+        <InputArea onAdd={handleAddItem}/>
 
         <TableArea list={filteredList} />
 
